@@ -50,7 +50,7 @@ namespace DotNetKoans.CSharp
         {
             object obj = null;
             // Assert.True(obj.Equals(null));
-            Assert.Null(obj);
+            Assert.Throws(typeof(System.NullReferenceException), delegate () { Assert.True(obj.Equals(null)); });
         }
     }
 }
