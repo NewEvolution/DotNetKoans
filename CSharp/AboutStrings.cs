@@ -164,15 +164,15 @@ broken line";
 		[Koan(16)]
 		public void SeperatorsCanBeAdded()
 		{
-			var str = string.Format("{0:n}", 123456);
-			Assert.Equal("123,456.00", str);
+			var str = string.Format("{0:n0}", 123456);
+			Assert.Equal("123,456", str);
 		}
 
 		[Koan(17)]
 		public void CurrencyDesignatorsCanBeAdded()
 		{
-			var str = string.Format("{0:n}", 123456);
-			Assert.Equal("123,456.00", str);
+			var str = string.Format("{0:c}", 123456);
+			Assert.Equal("$123,456.00", str);
 		}
 
 		[Koan(18)]
